@@ -1,0 +1,25 @@
+templates:
+  nether-custom-hd:
+    enabled: true
+    extrazoomout: 2
+    center:
+      x: 0
+      y: 64
+      z: 0
+    maps:
+      - class: org.dynmap.hdmap.HDMap
+        name: flat
+        title: "Map"
+        perspective: iso_S_90_hd
+        shader: defaultscheme
+        lighting: default 
+        mapzoomin: 2
+        background: "#300806"
+      - class: org.dynmap.hdmap.HDMap
+        name: nether
+        title: "Satellite"
+        perspective: iso_SE_60_hd
+        shader: defaultscheme
+        lighting: default 
+        mapzoomin: 2
+        background: "#300806"

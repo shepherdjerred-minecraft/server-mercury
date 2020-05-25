@@ -13,7 +13,7 @@
 #   The definitions of these templates are in normal-hi_boost_vhi.txt, nether-hi_boost_vhi.txt, and the_end-hi_boost_vhi.txt
 # To use the HDMap hi-res (16 ppb) map templates, with support for boosting resolution selectively to xhi-res (64 ppb), set value to hi_boost_xhi
 #   The definitions of these templates are in normal-hi_boost_xhi.txt, nether-hi_boost_xhi.txt, and the_end-hi_boost_xhi.txt
-deftemplatesuffix: hires
+deftemplatesuffix: custom-hd 
 
 # Map storage scheme: only uncomment one 'type' value
 #  filetree: classic and default scheme: tree of files, with all map data under the directory indicated by 'tilespath' setting
@@ -41,7 +41,7 @@ components:
   - class: org.dynmap.InternalClientUpdateComponent
     sendhealth: true
     sendposition: true
-    allowwebchat: true
+    allowwebchat: false
     webchat-interval: 5
     hidewebchatip: false
     trustclientname: false
@@ -95,17 +95,12 @@ components:
   #  chatlengthlimit: 256
   #  hide-if-invisiblity-potion: true
   #  hidenames: false
-   
-  - class: org.dynmap.SimpleWebChatComponent
-    allowchat: true
-    # If true, web UI users can supply name for chat using 'playername' URL parameter.  'trustclientname' must also be set true.
-    allowurlname: false
   
   # Note: this component is needed for the dmarker commands, and for the Marker API to be available to other plugins
   - class: org.dynmap.MarkersComponent
     type: markers
     showlabel: false
-    enablesigns: false
+    enablesigns: true
     # Default marker set for sign markers
     default-sign-set: markers
     # (optional) add spawn point markers to standard marker layer
@@ -113,15 +108,15 @@ components:
     spawnicon: world
     spawnlabel: "Spawn"
     # (optional) layer for showing offline player's positions (for 'maxofflinetime' minutes after logoff)
-    showofflineplayers: false
+    showofflineplayers: true
     offlinelabel: "Offline"
     offlineicon: offlineuser
     offlinehidebydefault: true
     offlineminzoom: 0
     maxofflinetime: 30
     # (optional) layer for showing player's spawn beds
-    showspawnbeds: false
-    spawnbedlabel: "Spawn Beds"
+    showspawnbeds: true
+    spawnbedlabel: "Beds"
     spawnbedicon: bed
     spawnbedhidebydefault: true
     spawnbedminzoom: 0
@@ -129,22 +124,6 @@ components:
     # (optional) show world border (vanilla 1.8+)
     showworldborder: true
     
-  - class: org.dynmap.ClientComponent
-    type: chat
-    allowurlname: false
-  - class: org.dynmap.ClientComponent
-    type: chatballoon
-    focuschatballoons: false
-  - class: org.dynmap.ClientComponent
-    type: chatbox
-    showplayerfaces: true
-    messagettl: 5
-    # Optional: set number of lines in scrollable message history: if set, messagettl is not used to age out messages
-    #scrollback: 100
-    # Optional: set maximum number of lines visible for chatbox
-    #visiblelines: 10
-    # Optional: send push button
-    sendbutton: false
   - class: org.dynmap.ClientComponent
     type: playermarkers
     showplayerfaces: true
@@ -256,7 +235,7 @@ block-id-alias:
   
 # Default image format for HDMaps (png, jpg, jpg-q75, jpg-q80, jpg-q85, jpg-q90, jpg-q95, jpg-q100)
 # Has no effect on maps with explicit format settings
-image-format: png
+image-format: jpg-q95
 
 #  use-generated-textures: if true, use generated textures (same as client); false is static water/lava textures
 #  correct-water-lighting: if true, use corrected water lighting (same as client); false is legacy water (darker)
@@ -271,10 +250,10 @@ ctm-support: true
 custom-colors-support: true
 
 # Control loading of player faces (if set to false, skins are never fetched)
-#fetchskins: false
+fetchskins: true
 
 # Control updating of player faces, once loaded (if faces are being managed by other apps or manually)
-#refreshskins: false
+refreshskins: true
 
 # Customize URL used for fetching player skins (%player% is macro for name)
 skin-url: "http://skins.minecraft.net/MinecraftSkins/%player%.png"
@@ -299,7 +278,7 @@ render-triggers:
   #- blockredstone
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
-#webpage-title: "My Awesome Server Map"
+webpage-title: "LiveMap"
 
 # The path where the tile-files are placed.
 tilespath: web/tiles
@@ -372,7 +351,7 @@ player-sort-permission-nodes:
   - bukkit.command.op
   
 # Set sidebaropened: 'true' to pin menu sidebar opened permanently, 'pinned' to default the sidebar to pinned, but allow it to unpin
-#sidebaropened: true
+sidebaropened: true
 
 # Customized HTTP response headers - add 'id: value' pairs to all HTTP response headers (internal web server only)
 #http-response-headers:
