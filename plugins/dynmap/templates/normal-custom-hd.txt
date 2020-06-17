@@ -11,14 +11,14 @@ templates:
         name: flat
         title: "Map"
         perspective: iso_S_90_hd
-        shader: defaultscheme
+        shader: stdtexture
         lighting: brightnightandday-smooth
         mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: surface
         title: "Satellite"
         perspective: iso_SE_60_hd
-        shader: defaultscheme
+        shader: stdtexture
         lighting: brightnightandday-smooth
         mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
