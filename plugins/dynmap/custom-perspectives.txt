@@ -3,9 +3,9 @@ perspectives:
     name: iso_S_90_hd
     azimuth: 180
     inclination: 90
-    scale: 32
+    scale: 16
   - class: org.dynmap.hdmap.IsoHDPerspective
     name: iso_SE_60_hd
     azimuth: 135
     inclination: 60
-    scale: 32
+    scale: 16
