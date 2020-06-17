@@ -10,6 +10,7 @@ plugins/dynmap/perspectives.txt
 plugins/dynmap/shaders.txt
 plugins/dynmap/version.txt
 plugins/dynmap/worlds.txt
+plugins/dynmap/colorschemes/
 plugins/LuckPerms/libs/
 plugins/LuckPerms/*.db
 plugins/mcMMO/backup/
