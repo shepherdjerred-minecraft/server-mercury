@@ -3,6 +3,7 @@ plugins/dynmap/renderdata/
 plugins/dynmap/web/
 plugins/dynmap/world*.pending
 plugins/dynmap/texturepacks/
+plugins/dynmap/templates/
 logs/
 usercache.json
 *.jar
