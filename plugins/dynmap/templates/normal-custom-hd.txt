@@ -13,32 +13,32 @@ templates:
         perspective: iso_S_90_hd
         shader: defaultscheme
         lighting: brightnightandday-smooth
-        mapzoomin: 1
+        mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: surface
         title: "Satellite"
         perspective: iso_SE_60_hd
         shader: defaultscheme
         lighting: brightnightandday-smooth
-        mapzoomin: 1
+        mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: cave
         title: "Cave"
         perspective: iso_SE_60_hd
         shader: cave
         lighting: default
-        mapzoomin: 1
+        mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: biome
         title: "Biome"
         perspective: iso_S_90_hd
         shader: biome
         lighting: default
-        mapzoomin: 1
+        mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: other
         title: "Topographic"
         perspective: iso_S_90_hd
         shader: topo256-noplants
         lighting: default
-        mapzoomin: 1
+        mapzoomin: 0

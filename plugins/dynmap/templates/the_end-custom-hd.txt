@@ -13,11 +13,11 @@ templates:
         perspective: iso_S_90_hd
         shader: defaultscheme
         lighting: default 
-        mapzoomin: 1
+        mapzoomin: 0
       - class: org.dynmap.hdmap.HDMap
         name: the_end
         title: "Satellite"
         perspective: iso_SE_60_hd
         shader: defaultscheme
         lighting: default 
-        mapzoomin: 1
+        mapzoomin: 0
