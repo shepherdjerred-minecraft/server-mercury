@@ -6,6 +6,8 @@ plugins/dynmap/texturepacks/
 plugins/dynmap/templates/
 plugins/LuckPerms/libs/
 plugins/LuckPerms/*.db
+plugins/mcMMO/backup/
+plugins/mcMMO/flatfile/
 logs/
 usercache.json
 *.jar
