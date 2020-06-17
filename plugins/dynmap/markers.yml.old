@@ -11,8 +11,15 @@ sets:
         areas: {
             }
         label: Offline
-        markers: {
-            }
+        markers:
+            shepherdjerred:
+                world: world
+                markup: false
+                x: -618.0
+                icon: offlineuser
+                y: 71.0
+                z: 125.0
+                label: shepherdjerred
         lines: {
             }
         layerprio: 0
