@@ -4,6 +4,8 @@ plugins/dynmap/web/
 plugins/dynmap/world*.pending
 plugins/dynmap/texturepacks/
 plugins/dynmap/templates/
+plugins/LuckPerms/libs/
+plugins/LuckPerms/*.db
 logs/
 usercache.json
 *.jar
