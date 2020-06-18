@@ -13,14 +13,14 @@ templates:
         perspective: iso_S_90_hd
         shader: stdtexture
         lighting: brightnightandday-smooth
-        mapzoomin: 0
+        mapzoomin: 1
       - class: org.dynmap.hdmap.HDMap
         name: surface
         title: "Satellite"
         perspective: iso_SE_60_hd
         shader: stdtexture
         lighting: brightnightandday-smooth
-        mapzoomin: 0
+        mapzoomin: 1
       - class: org.dynmap.hdmap.HDMap
         name: cave
         title: "Cave"
