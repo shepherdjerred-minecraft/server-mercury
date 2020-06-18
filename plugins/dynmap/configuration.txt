@@ -39,28 +39,28 @@ components:
   - class: org.dynmap.ClientConfigurationComponent
 
   - class: org.dynmap.JsonFileClientUpdateComponent
-   writeinterval: 1
-   sendhealth: true
-   sendposition: true
-   allowwebchat: false
-   webchat-interval: 10
-   hidewebchatip: false
-   includehiddenplayers: false
-   use-name-colors: false
-   use-player-login-ip: false
-   require-player-login-ip: false
-   block-banned-player-chat: true
-   hideifshadow: 0
-   hideifundercover: 0
-   hideifsneaking: false
-   # Require login for web-to-server chat (requires login-enabled: true)
-   webchat-requires-login: false
-   # If set to true, users must have dynmap.webchat permission in order to chat
-   webchat-permissions: false
-   # Limit length of single chat messages
-   chatlengthlimit: 256
-   hide-if-invisiblity-potion: true
-   hidenames: false
+    writeinterval: 1
+    sendhealth: true
+    sendposition: true
+    allowwebchat: false
+    webchat-interval: 10
+    hidewebchatip: false
+    includehiddenplayers: false
+    use-name-colors: false
+    use-player-login-ip: false
+    require-player-login-ip: false
+    block-banned-player-chat: true
+    hideifshadow: 0
+    hideifundercover: 0
+    hideifsneaking: false
+    # Require login for web-to-server chat (requires login-enabled: true)
+    webchat-requires-login: false
+    # If set to true, users must have dynmap.webchat permission in order to chat
+    webchat-permissions: false
+    # Limit length of single chat messages
+    chatlengthlimit: 256
+    hide-if-invisiblity-potion: true
+    hidenames: false
 
   # Note: this component is needed for the dmarker commands, and for the Marker API to be available to other plugins
   - class: org.dynmap.MarkersComponent
