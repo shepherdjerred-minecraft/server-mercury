@@ -1,0 +1,90 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Resources for the Mercury server
+Resources:
+  DynmapIamUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: "mercury-livemap-s3"
+      Policies:
+        - PolicyName: "livemap-s3"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - "s3:*"
+                Resource:
+                  - Fn::GetAtt:
+                      - DynmapBucket
+                      - Arn
+                  - Fn::Join:
+                      - ""
+                      - - Fn::GetAtt:
+                            - DynmapBucket
+                            - Arn
+                        - "/*"
+  DynmapDistributionIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment:
+          Fn::Join:
+            - ""
+            - - "access-identity-com."
+              - Fn::GetAtt:
+                  - DynmapBucket
+                  - DomainName
+  DynmapDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - livemap.shepherdjerred.com
+        DefaultCacheBehavior:
+          ForwardedValues:
+            QueryString: True
+          Compress: true
+          DefaultTTL: 60
+          ViewerProtocolPolicy: "redirect-to-https"
+          TargetOriginId: "s3"
+        DefaultRootObject: "index.html"
+        Enabled: True
+        Origins:
+          - Id: s3
+            DomainName:
+              Fn::GetAtt:
+                - DynmapBucket
+                - DomainName
+            S3OriginConfig:
+              OriginAccessIdentity:
+                Fn::Join:
+                  - ""
+                  - - "origin-access-identity/cloudfront/"
+                    - Ref: "DynmapDistributionIdentity"
+        PriceClass: "PriceClass_100"
+        ViewerCertificate:
+          AcmCertificateArn: "arn:aws:acm:us-east-1:692594597524:certificate/6f827781-9221-4818-9ff6-83a31817a1e0"
+          MinimumProtocolVersion: "TLSv1.2_2018"
+          SslSupportMethod: "sni-only"
+        IPV6Enabled: True
+  DynmapBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: com.shepherdjerred.minecraft.mercury.dynmap
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: True
+        BlockPublicPolicy: True
+        IgnorePublicAcls: True
+        RestrictPublicBuckets: True
+  DynmapRecordSet:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: Z24MJMG74F2S94
+      Name: "livemap.shepherdjerred.com"
+      Type: A
+      AliasTarget:
+        HostedZoneId: "Z2FDTNDATAQYW2"
+        DNSName:
+          Fn::GetAtt:
+            - DynmapDistribution
+            - DomainName
