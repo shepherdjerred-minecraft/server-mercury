@@ -14,8 +14,11 @@ plugins/dynmap/shaders.txt
 plugins/dynmap/version.txt
 plugins/dynmap/worlds.txt
 plugins/dynmap/colorschemes/
+plugins/CraftBook/persistence.yml
+plugins/CraftBook/en_US.yml
+plugins/WorldEdit/sessions/
+wepif.yml
 plugins/LuckPerms/libs/
-plugins/LuckPerms/*.db
 plugins/mcMMO/backup/
 plugins/mcMMO/flatfile/
 plugins/stFriends/
@@ -23,3 +26,5 @@ logs/
 usercache.json
 *.jar
 world*/
+*.db
+*.sqlite
