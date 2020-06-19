@@ -10,27 +10,34 @@
 # List of mechanics to enable! If they aren't in this list, the server won't load them!
 enabled-mechanics:
 - Variables
-
-# A list of CraftBook mechanics that are disabled, for easy copy/pastability to the enabled list.
-disabled-mechanics:
 - AI
 - Ammeter
 - BetterLeads
 - BetterPhysics
-- BetterPistons
 - BetterPlants
-- BoatDecay
+- BetterPistons
 - BoatDrops
 - BoatExitRemover
 - BoatRemoveEntities
 - BoatSpeedModifiers
 - BoatUncrashable
 - BoatWaterPlaceOnly
+- Chairs
+- Footprints
+- Glowstone
+- HiddenSwitch
+- LightStone
+- LightSwitch
+- PaintingSwitcher
+- Snow
+
+# A list of CraftBook mechanics that are disabled, for easy copy/pastability to the enabled list.
+disabled-mechanics:
+- BoatDecay
 - Bookcase
 - BounceBlocks
 - Bridge
 - Cauldron
-- Chairs
 - ChunkAnchor
 - CommandItems
 - CommandSigns
@@ -40,19 +47,14 @@ disabled-mechanics:
 - DispenserRecipes
 - Door
 - Elevator
-- Footprints
 - Gate
-- Glowstone
 - HeadDrops
-- HiddenSwitch
 - ICs
 - JackOLantern
 - Jukebox
 - LandBoats
 - LegacyCauldron
 - LegacyCustomDrops
-- LightStone
-- LightSwitch
 - MapChanger
 - Marquee
 - MinecartBooster
@@ -83,11 +85,9 @@ disabled-mechanics:
 - MinecartTemporaryCart
 - MinecartVisionSteering
 - Netherrack
-- PaintingSwitcher
 - Pay
 - Pipes
 - SignCopier
-- Snow
 - Sponge
 - Teleporter
 - ToggleArea
@@ -144,7 +144,7 @@ debug-flags: []
 easter-eggs: true
 
 # Random numbers are much more random, with a small cost to CPU usage.
-realistic-randoms: false
+realistic-randoms: true
 
 # Show messages when a player does not have permission to do something.
 show-permission-messages: true

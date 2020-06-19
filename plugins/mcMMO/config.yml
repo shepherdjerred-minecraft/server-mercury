@@ -41,7 +41,7 @@ General:
     # This should fix blocks being broken client side, but not server-side.
     # Enable to refresh the chunks around a player at the end of Super Breaker,
     # Giga Drill Breaker, and Berserk. Resource intensive for larger servers.
-    Refresh_Chunks: false
+    Refresh_Chunks: true
 
 #
 #  Settings for the mcMMO scoreboards
@@ -50,7 +50,7 @@ Scoreboard:
     # Set this to true to enable scoreboards
     UseScoreboards: false
     # Display player's power levels below their names?
-    Power_Level_Tags: false
+    Power_Level_Tags: true
 
     # Allow players to use "/mcscoreboard keep" to keep the scoreboard up
     Allow_Keep: true
@@ -415,7 +415,7 @@ Skills:
         # When using Unarmed, picked up items will automatically get moved to a free slot instead of going in the slot
         # of your hand. Should item pickup be disabled when your entire inventory - except for your hand - is full?
         Item_Pickup_Disabled_Full_Inventory: true
-        # Any attacks made without a tool, i.e. with one's open hand, a block, etc., will count as unarmed. 
+        # Any attacks made without a tool, i.e. with one's open hand, a block, etc., will count as unarmed.
         Items_As_Unarmed: false
     Woodcutting:
         Tree_Feller_Sounds: true
@@ -582,4 +582,4 @@ Particles:
 Sounds:
     # This setting controls the master volume. 1.0 is Max,  0 would be off
     MasterVolume: 1.0
-    
+
