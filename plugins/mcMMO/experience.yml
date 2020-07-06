@@ -1,13 +1,11 @@
+
 #
 #  Experience configuration
-#  Last updated on 2.1.128-b${BUILD_NUMBER}
+#  Last updated on 2.1.131-b${BUILD_NUMBER}
 #
 #  Configure the experience formula and experience settings here.
 #
 #####
-
-
-
 # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/boss/BarColor.html
 # These are the only valid colors for Experience Bars, use the exact name found here
 # BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW (As of the time of this update these are the only Bar colors available, this could change in the future so check the BarColor enum to see if it has)
@@ -119,31 +117,26 @@ Experience_Formula:
     # LINEAR:      base + (level * multiplier)
     # EXPONENTIAL: multiplier * level ^ exponent + base
     Curve: LINEAR
-
     # If invalid values are entered mcMMO will not start and print an error in the console
     Linear_Values:
         base: 1020
         multiplier: 20
     Exponential_Values:
         multiplier: 0.1
-        exponent: 1.80
+        exponent: 1.8
         base: 2000
-
     # Cumulative experience curves will use a players power level instead of their skill level,
     # players with high power levels will have to gain a lot more experience to reach the next level in every skill.
     Cumulative_Curve: false
-
     # Experience gained in every skill will get multiplied by this value. 1.0 by default, 2.0 means two times as much
     Multiplier:
         Global: 1.0
         PVP: 1.0
-
     # Experience gained from mobs not naturally spawned will get multiplied by this value. 0 by default.
     Mobspawners:
         Multiplier: 0
     Breeding:
         Multiplier: 1.0
-
     # Experience gained will get divided by these values. 1.0 by default, 2.0 means two times less XP gained.
     Modifier:
         Swords: 1.0
@@ -159,12 +152,10 @@ Experience_Formula:
         Repair: 1.0
         Fishing: 1.0
         Alchemy: 1.0
-
     # XP earned by players with the permission mcmmo.perks.xp.customboost.<skillname> will get multiplied
     # with 1.25 by default, resulting in a 25% XP boost
     Custom_XP_Perk:
         Boost: 1.25
-
 #
 # Settings for Diminished Returns
 ###
@@ -174,7 +165,6 @@ Diminished_Returns:
     ### Set this value to 0 to turn it off
     Guaranteed_Minimum_Percentage: 0.05
     Enabled: false
-
     # Limit the amount of experience a player can earn:
     # Threshold (amount of experience) per Time_Interval (in minutes)
     Threshold:
@@ -191,16 +181,13 @@ Diminished_Returns:
         Repair: 20000
         Fishing: 20000
         Alchemy: 20000
-
     Time_Interval: 10
-
 #
 #  Settings for XP conversion with '/mcconvert experience'
 ###
 Conversion:
     # Old experience will get divided by this modifier
     Exp_Modifier: 1
-
 #
 #  Settings for XP distribution
 ###
@@ -211,7 +198,6 @@ Experience_Values:
         Dodge: 800
         Roll: 600
         Fall: 600
-
         # FeatherFall_Multiplier: Multiply Acrobatics XP by this value when wearing boots with the Feather Fall enchant
         FeatherFall_Multiplier: 2.0
     Alchemy:
@@ -281,6 +267,10 @@ Experience_Values:
         Red_Mushroom_Block: 70
         Brown_Mushroom_Block: 70
         Mushroom_Stem: 80
+        Crimson_Hyphae: 50
+        Stripped_Warped_Hyphae: 50
+        Warped_Hyphae: 50
+        Stripped_Crimson_Hyphae: 50
     Herbalism:
         Crimson_Roots: 6
         Warped_Roots: 6
@@ -366,6 +356,7 @@ Experience_Values:
         Cornflower: 150
         Lily_Of_The_Valley: 150
         Wither_Rose: 500
+        Shroomlight: 250
     Mining:
         Warped_Nylium: 5
         Crimson_Nylium: 5
@@ -430,6 +421,14 @@ Experience_Values:
         Purpur_Pillar: 250
         Purpur_Slab: 150
         Purpur_Stairs: 250
+        Bone_Block: 500
+        Chiseled_Nether_Bricks: 50
+        Chain: 100
+        Crying_Obsidian: 3000
+        Blackstone: 55
+        Cracked_Nether_Bricks: 50
+        Gilded_Blackstone: 200
+        Red_Nether_Bricks: 50
     Repair:
         Base: 1000.0
         Wood: 0.6
@@ -440,6 +439,7 @@ Experience_Values:
         Leather: 1.6
         String: 1.8
         Other: 1.5
+        Netherite: 6.0
     Smelting:
         Ancient_Debris: 200
         Coal_Ore: 10
@@ -532,4 +532,5 @@ Experience_Values:
             Zombie_Pigman: 3.0
             Zombified_Piglin: 3.0
             Strider: 1.2
-
+            Zoglin: 2.5
+            Piglin_Brute: 4.5
