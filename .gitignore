@@ -1,6 +1,11 @@
 *.iml
 .idea/
 .aws-sam/
+plugins/AsyncWorldEdit/license.txt
+plugins/AsyncWorldEdit/english.yml
+plugins/AsyncWorldEdit/installed
+plugins/AsyncWorldEdit/plugins
+plugins/AsyncWorldEdit/undo
 plugins/dynmap/ids-by-ip.txt
 plugins/dynmap/renderdata/
 plugins/dynmap/web/
